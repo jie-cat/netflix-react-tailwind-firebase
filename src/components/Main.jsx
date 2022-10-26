@@ -8,7 +8,6 @@ const Main = () => {
 
   // 隨機抽樣
   const movie = movies[Math.floor(Math.random() * movies.length)];
-  console.log(movie);
 
   useEffect(() => {
     axios
