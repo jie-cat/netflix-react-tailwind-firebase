@@ -6,7 +6,9 @@ import {
   signOut,
 } from "firebase/auth";
 
-import { auth } from "../firebase"; //取得認證資料
+import { auth, db } from "../firebase"; //取得認證資料
+
+import { doc, setDoc } from "firebase/firestore";
 
 // 建立 Context物件
 const AuthContext = createContext();
@@ -16,7 +18,10 @@ export function AuthContextProvider({ children }) {
 
   // 註冊
   const signUp = (email, password) => {
-    return createUserWithEmailAndPassword(auth, email, password);
+    createUserWithEmailAndPassword(auth, email, password);
+    setDoc(doc(db, "users", email), {
+      saveShow: [],
+    });
   };
 
   // 登入

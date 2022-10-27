@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <div className="flex justify-between p-4 z-[100] absolute w-full">
       <Link to="/">
-        <h1 className="text-red-600 text-5xl font-black cursor-pointer">
+        <h1 className="font-bebas-neue text-red-600 text-5xl font-black cursor-pointer">
           NETFLIX
         </h1>
       </Link>
