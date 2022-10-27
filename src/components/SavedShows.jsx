@@ -60,7 +60,7 @@ const SavedShows = () => {
           id={"slider"}
           className="w-full h-full whitespace-nowrap items-center overflow-x-scroll scrollbar-hide scroll-smooth"
         >
-          {movies.map((item, index) => (
+          {movies?.map((item, index) => (
             <div
               key={index}
               className="w-[160px] sm:w-[200px] md:w-[250px] xl:w-[280px] inline-block cursor-pointer p-2 relative"
