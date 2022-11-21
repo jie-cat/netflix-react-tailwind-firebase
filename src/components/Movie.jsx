@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 // auth
 import { UserAuth } from "../contexts/AuthContext";
 import { db } from "../firebase";
@@ -21,11 +22,11 @@ const Movie = ({ item, id }) => {
           image: item.poster_path,
         }),
       });
+      console.log("save success!!");
     } else {
       alert("please login to save a movie");
     }
   };
-
   return (
     <>
       <div className="w-[160px] sm:w-[200px] md:w-[250px] xl:w-[280px] inline-block cursor-pointer p-2 relative">
@@ -36,14 +37,26 @@ const Movie = ({ item, id }) => {
         />
 
         {/* 遮罩 */}
-        <div className="absolute top-0 left-0 w-full h-full hover:bg-black hover:opacity-80 text-white opacity-0">
-          <p className="white-space-normal font-bold  flex justify-center h-full items-center">
-            {item?.title}
-          </p>
-          <p onClick={saveShow} className="absolute top-4 left-4">
-            {like ? <FaHeart size={20} /> : <FaRegHeart size={20} />}
-          </p>
-        </div>
+        <Link
+          to="/introduce"
+          state={{
+            bgImage: item.poster_path,
+            title: item.title,
+            adult: item.adult,
+            date: item.release_date,
+            overview: item.overview,
+            id: item.id,
+          }}
+        >
+          <div className="absolute top-0 left-0 w-full h-full hover:bg-black hover:opacity-80 text-white opacity-0">
+            <p className="white-space-normal font-bold  flex justify-center h-full items-center">
+              {item?.title}
+            </p>
+          </div>
+        </Link>
+        <p onClick={saveShow} className="absolute top-4 left-4">
+          {like ? <FaHeart size={20} /> : <FaRegHeart size={20} />}
+        </p>
       </div>
     </>
   );

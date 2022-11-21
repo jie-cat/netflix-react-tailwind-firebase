@@ -7,12 +7,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER,
-  appId: process.env.REACT_APP_APP_ID,
+  apiKey: "AIzaSyAfmHxXiHSUrGvgEph6MNghK1WOTAb4nPo",
+  authDomain: "netflix-react-44c30.firebaseapp.com",
+  projectId: "netflix-react-44c30",
+  storageBucket: "netflix-react-44c30.appspot.com",
+  messagingSenderId: "386261804321",
+  appId: "1:386261804321:web:059265b236e70b0fe78a60",
 };
 
 // Initialize Firebase

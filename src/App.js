@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Account from "./pages/Account";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Introduce from "./pages/Introduce";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/Login" element={<Login />}></Route>
           <Route path="/signup" element={<Signup />}></Route>
+          <Route path="/introduce" element={<Introduce />}></Route>
           <Route
             path="/account"
             element={

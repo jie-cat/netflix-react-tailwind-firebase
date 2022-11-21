@@ -18,8 +18,6 @@ const Row = ({ title, fetchURL, rowID }) => {
       });
   }, [fetchURL]);
 
-  // console.log(movies);
-
   const slideLeft = () => {
     let slider = document.getElementById("slider" + rowID);
     // console.log(slider);
@@ -31,6 +29,8 @@ const Row = ({ title, fetchURL, rowID }) => {
     // console.log(slider);
     slider.scrollLeft = slider.scrollLeft + 500;
   };
+
+  // console.log(movies);
 
   return (
     <>
